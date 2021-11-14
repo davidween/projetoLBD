@@ -2486,3 +2486,93 @@ Request URL: /permissoes
 Client IP: 127.0.0.1
 
 
+2021-11-14 19:51:07 error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'livraria.log_edit_emprestimos' doesn't exist in /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php on line 39
+Stack Trace:
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php:39
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:180
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php:75
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Database/Connection.php:337
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Database/Connection.php:340
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Database/Query.php:250
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/ORM/Table.php:2158
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/ORM/Table.php:1970
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/ORM/Table.php:1869
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/ORM/Table.php:1558
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Database/Connection.php:686
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/ORM/Table.php:1559
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/ORM/Table.php:1870
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/src/Controller/EmprestimosController.php:60
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Controller/Controller.php:537
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:140
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:115
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/BaseApplication.php:317
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:174
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:124
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:162
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/webroot/index.php:40
+
+Request URL: /emprestimos/edit/5
+Referer URL: http://localhost:8765/emprestimos/edit/5
+Client IP: 127.0.0.1
+
+
+2021-11-14 19:52:26 error: [PDOException] SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1 in /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php on line 39
+Stack Trace:
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php:39
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:180
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php:75
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Database/Connection.php:337
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Database/Connection.php:340
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Database/Query.php:250
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/ORM/Table.php:2158
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/ORM/Table.php:1970
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/ORM/Table.php:1869
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/ORM/Table.php:1558
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Database/Connection.php:686
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/ORM/Table.php:1559
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/ORM/Table.php:1870
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/src/Controller/EmprestimosController.php:60
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Controller/Controller.php:537
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:140
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:115
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/BaseApplication.php:317
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:174
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:124
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:162
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/m-david/Downloads/6° Semestre/Laboratório de Banco de Dados/projetoLBD/webroot/index.php:40
+
+Request URL: /emprestimos/edit/5
+Referer URL: http://localhost:8765/emprestimos/edit/5
+Client IP: 127.0.0.1
+
+

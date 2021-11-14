@@ -64,16 +64,55 @@ CREATE TABLE `autors_livros` (
   FOREIGN KEY (`livro_id`) REFERENCES `livros` (`id`)
 );
 
+CREATE TABLE log_edit_emprestimos(
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `user_id` INT NOT NULL,
+    `emprestimo_id` INT NOT NULL,
+    `username` VARCHAR(50) NOT NULL,
+    `pessoaname` VARCHAR(255) NOT NULL,
+    `criado_em` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
+-- Populando o Banco
 INSERT INTO generos(name, classificacao_indicativa) VALUES ('Aventura', 10);
 INSERT INTO generos(name, classificacao_indicativa) VALUES ('Terror', 18);
+INSERT INTO generos(name, classificacao_indicativa) VALUES ('Ficção', 13);
+INSERT INTO generos(name, classificacao_indicativa) VALUES ('Ação', 16);
+INSERT INTO generos(name, classificacao_indicativa) VALUES ('Drama', 3);
+INSERT INTO generos(name, classificacao_indicativa) VALUES ('Suspense', 17);
 
 
 INSERT INTO livros(genero_id, name, total_paginas, isbn) VALUES (1, 'Harry Potther', 500, '1234567894564');
-INSERT INTO livros(name, total_paginas, isbn) VALUES (2, 'Senhor dos Áneis', 500, '1234567894565');
+INSERT INTO livros(genero_id, name, total_paginas, isbn) VALUES (2, 'Senhor dos Áneis', 500, '1234567894565');
+INSERT INTO livros(genero_id, name, total_paginas, isbn) VALUES (1, 'Percy Jackson', 450, '1234567894566');
+INSERT INTO livros(genero_id, name, total_paginas, isbn) VALUES (3, 'O Chamado', 450, '1234567894567');
+INSERT INTO livros(genero_id, name, total_paginas, isbn) VALUES (6, 'O Código Da Vinci', 578, '1234567894568');
+INSERT INTO livros(genero_id, name, total_paginas, isbn) VALUES (2, 'Dexter : A mão esquerda de Deus', 500, '1234567894569');
+INSERT INTO livros(genero_id, name, total_paginas, isbn) VALUES (4, 'As Crônicas de Nárnia', 560, '1234567894561');
+INSERT INTO livros(genero_id, name, total_paginas, isbn) VALUES (5, 'Crônicas de Gelo e Fogo', 750, '1234567894562');
 
 
 INSERT INTO pessoas(name, cpf) VALUES ('David Sousa', '12345678984');
 
-INSERT INTO users(pessoa_id, username, password) VALUES (1, 'davidween', '$2y$10$ZEC2QaPL40x5Jk9OfBhPKeRDw8UhKEwpxqc3RrKied2FatO5kbJqi');
--- 12345678
+
+INSERT INTO users(pessoa_id, username, password) VALUES (1, 'davidween', '$2y$10$ZEC2QaPL40x5Jk9OfBhPKeRDw8UhKEwpxqc3RrKied2FatO5kbJqi'); -- senha 12345678
+
+
+-- TRIGGER
+
+CREATE OR REPLACE TRIGGER audit_edicao_emprestimos 
+    BEFORE UPDATE ON emprestimos
+    FOR EACH ROW
+    INSERT INTO log_edit_emprestimos(
+        user_id, 
+        emprestimo_id, 
+        username,
+        pessoaname
+    )
+    VALUES(
+        OLD.user_id,
+        OLD.id,
+        (SELECT username FROM users, emprestimos WHERE users.id = OLD.user_id AND emprestimos.id = OLD.id),
+        (SELECT pessoas.name FROM users, pessoas WHERE pessoas.id = (SELECT pessoa_id FROM users WHERE id = OLD.user_id))
+    );
+   
