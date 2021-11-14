@@ -1,7 +1,7 @@
 # Projeto em cakePHP para disciplina de Laboratório de Banco de Dados
 
 
-# Banco de dados
+## Banco de dados
 
 1) Acessar tests/schema.sql, lá estão os comandos para criar e popular o banco de dados (MariaDB ou MySQL)
 
@@ -16,11 +16,11 @@
 ```
 
 
-# Cakephp  
+## Cakephp  
 
 1) Instale o composer globalmente: ```curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer```
 
-2) Clone esse projeto.
+2) Clone esse projeto: https://github.com/davidween/projetoLBD
 
 3) Na pasta do projeto, no terminal: ```composer install```
 
