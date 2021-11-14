@@ -24,6 +24,8 @@
 
 3) Na pasta do projeto, no terminal: ```composer install```
 
+4) Instale o plugin: ```php composer.phar require "cakephp/authentication:^2.0"```
+
 
 ## Inicialização
 
